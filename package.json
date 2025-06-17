@@ -2,7 +2,7 @@
   "name": "elevator-simulator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Kuldik.github.io/elevator-simulator",
+  "homepage": "https://kuldik.github.io/elevator-simulator",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",

@@ -6,8 +6,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: isProd ? "/Elevator-simulator" : "",
-  assetPrefix: isProd ? "/Elevator-simulator/" : "",
+  basePath: isProd ? "/elevator-simulator" : "",
+  assetPrefix: isProd ? "/elevator-simulator/" : "",
 };
 
 module.exports = nextConfig;
+
