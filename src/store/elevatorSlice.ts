@@ -4,7 +4,7 @@ interface ElevatorState {
   currentFloor: number;
   queue: number[];
   direction: "up" | "down" | "idle";
-  status: "moving" | "stopped" | "doors";
+  status: "moving" | "stopped" | "arriving";
 }
 
 const initialState: ElevatorState = {

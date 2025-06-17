@@ -84,7 +84,7 @@ const Elevator = () => {
 
     setTimeout(() => {
       dispatch(setCurrentFloor(nextFloor));
-      dispatch(setStatus("doors"));
+      dispatch(setStatus("arriving"));
 
       setTimeout(() => {
         dispatch(removeFromQueue(nextFloor));
@@ -93,7 +93,7 @@ const Elevator = () => {
     }, 2000); // Время на переезд
   }, [queue, currentFloor, status, direction, dispatch]);
 
-  const floorHeights = [40, 120, 120, 120, 120, 120, 120];
+  const floorHeights = [40, 130, 130, 140, 135, 130, 130];
 
   const getOffsetY = (floor: number) => {
   return -floorHeights.slice(0, floor).reduce((acc, h) => acc + h, 0);
@@ -103,7 +103,7 @@ const Elevator = () => {
       style={{
         position: "relative",
         width: "100px",
-        height: `${FLOOR_HEIGHT * TOTAL_FLOORS - 300 }px`,
+        height: `${FLOOR_HEIGHT * TOTAL_FLOORS - 237 }px`,
       }}
     >
       <motion.div
