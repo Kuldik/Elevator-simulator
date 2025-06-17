@@ -14,6 +14,8 @@ const initialState: ElevatorState = {
   status: "stopped",
 };
 
+
+
 const elevatorSlice = createSlice({
   name: "elevator",
   initialState,
@@ -29,6 +31,12 @@ const elevatorSlice = createSlice({
     setStatus(state, action: PayloadAction<ElevatorState["status"]>) {
       state.status = action.payload;
     },
+    removeFromQueue(state, action: PayloadAction<number>) {
+      state.queue = state.queue.filter(floor => floor !== action.payload);
+    },
+    setDirection(state, action: PayloadAction<"up" | "down" | "idle">) {
+      state.direction = action.payload;
+    },
     clearQueue(state) {
       state.queue = [];
     },
@@ -40,6 +48,8 @@ export const {
   setCurrentFloor,
   setStatus,
   clearQueue,
+  removeFromQueue,
+  setDirection,
 } = elevatorSlice.actions;
 
 export default elevatorSlice.reducer;
