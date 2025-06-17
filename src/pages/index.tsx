@@ -1,9 +1,7 @@
-import Image from "next/image";
 import Elevator from "../components/Elevator/Elevator";
 import ControlPanel from "../components/ControlPanel/ControlPanel";
 import QueueDisplay from "@/components/QueueDisplay";
 import StatusIndicator from "@/components/StatusIndicator";
-import { getPublicPath } from "@/utils/getPublicPath";
 
 export default function Home() {
   return (
@@ -19,12 +17,17 @@ export default function Home() {
     overflow: "hidden",
   }}
 >
-  <Image
-    src={getPublicPath("/building.png")}
+  <img
+    src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/building.png`}
     alt="Building"
-    fill
-    style={{ objectFit: "contain", zIndex: 0 }}
-    priority
+    style={{
+      position: "absolute",
+      inset: 0,
+      width: "100%",
+      height: "100%",
+      objectFit: "contain",
+      zIndex: 0,
+    }}
   />
 
   <div

@@ -9,8 +9,6 @@ import {
   removeFromQueue,
   setDirection,
 } from "../../store/elevatorSlice";
-import Image from "next/image";
-import { getPublicPath } from "@/utils/getPublicPath";
 
 const FLOOR_HEIGHT = 150;
 const TOTAL_FLOORS = 7;
@@ -123,8 +121,8 @@ const Elevator = () => {
           x: { duration: 0.4, repeat: Infinity, ease: "easeInOut" },
         }}
       >
-        <Image
-          src={getPublicPath("/lift.png")}
+        <img
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/lift.png`}
           alt="Lift cabin"
           width={100}
           height={110}
