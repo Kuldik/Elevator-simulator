@@ -7,7 +7,6 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: isProd ? "/elevator-simulator" : "",
-  // assetPrefix: isProd ? "/elevator-simulator/" : "",
 };
 
 module.exports = nextConfig;
