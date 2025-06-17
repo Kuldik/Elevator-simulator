@@ -5,7 +5,6 @@ import { useEffect } from "react";
 import {
   setCurrentFloor,
   setStatus,
-  clearQueue,
   addToQueue,
   removeFromQueue,
   setDirection,

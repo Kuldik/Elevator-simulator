@@ -30,7 +30,6 @@ export default function Home() {
     style={{
       position: "absolute",
       top: "50%",
-      transform: "translateY(-50%)",
       left: "50%",
       transformOrigin: "center",
       transform: "translate(-50%, -50%)",
