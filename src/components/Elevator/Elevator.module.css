@@ -1,0 +1,22 @@
+.wrapper {
+  position: relative;
+  width: 100px;
+  height: 700px;
+  border: 2px solid #555;
+  background: #111;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.cabin {
+  width: 100px;
+  height: 100px;
+  background: #f0f0f0;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ccc;
+  position: absolute;
+  bottom: 0;
+}

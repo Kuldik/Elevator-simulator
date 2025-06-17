@@ -4,8 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: "/elevator-simulator",
-  assetPrefix: "/elevator-simulator",
+  // basePath: "/elevator-simulator",
+  // assetPrefix: "/elevator-simulator",
 };
 
 module.exports = nextConfig;
