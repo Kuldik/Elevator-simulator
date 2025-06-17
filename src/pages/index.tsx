@@ -3,6 +3,7 @@ import Elevator from "../components/Elevator/Elevator";
 import ControlPanel from "../components/ControlPanel/ControlPanel";
 import QueueDisplay from "@/components/QueueDisplay";
 import StatusIndicator from "@/components/StatusIndicator";
+import { getPublicPath } from "@/utils/getPublicPath";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
   }}
 >
   <Image
-    src="/building.png"
+    src={getPublicPath("/building.png")}
     alt="Building"
     fill
     style={{ objectFit: "contain", zIndex: 0 }}
