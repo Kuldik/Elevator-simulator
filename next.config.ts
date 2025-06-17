@@ -2,12 +2,12 @@
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
-  output: isProd ? 'export' : undefined,
+  output: "export",
   images: {
     unoptimized: true,
   },
-  basePath: isProd ? "/elevator-simulator" : "",
-  assetPrefix: isProd ? "/elevator-simulator/" : "",
+  basePath: isProd ? "/Elevator-simulator" : "",
+  assetPrefix: isProd ? "/Elevator-simulator/" : "",
 };
 
 module.exports = nextConfig;
