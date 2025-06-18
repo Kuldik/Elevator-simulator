@@ -122,7 +122,7 @@ const Elevator = () => {
         }}
       >
         <img
-          src="/elevator-simulator/building.png"
+          src="/elevator-simulator/lift.png"
           alt="Lift cabin"
           width={100}
           height={110}
