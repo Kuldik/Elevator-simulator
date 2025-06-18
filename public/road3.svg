@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="60" viewBox="0 0 1912 113" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="band-gradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a0a0a0"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#a0a0a0"/>
+    </linearGradient>
+    <linearGradient id="thick-band-gradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cccccc"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cccccc"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1912" height="113" fill="#3c3c3c"/>
+
+  <!-- Center dashed line -->
+  <path d="M 65 56.5 H 1912" stroke="#999999" stroke-width="1.5" stroke-dasharray="20 15"/>
+  
+  <!-- Faint "10 -" marker -->
+  <text x="40" y="60" font-family="monospace" font-size="10" fill="#6a6a6a">10 -</text>
+  
+  <!-- Left ladder -->
+  <g fill="url(#band-gradient)">
+    <rect x="0" y="5" width="26" height="4"/>
+    <rect x="0" y="13.5" width="26" height="4"/>
+    <rect x="0" y="22" width="26" height="4"/>
+    <rect x="0" y="30.5" width="26" height="4"/>
+    <rect x="0" y="39" width="26" height="4"/>
+    <rect x="0" y="47.5" width="26" height="4"/>
+    <rect x="0" y="62.5" width="26" height="4"/>
+    <rect x="0" y="71" width="26" height="4"/>
+    <rect x="0" y="79.5" width="26" height="4"/>
+    <rect x="0" y="88" width="26" height="4"/>
+    <rect x="0" y="96.5" width="26" height="4"/>
+    <rect x="0" y="105" width="26" height="4"/>
+  </g>
+  
+  <!-- Original Top row of bands -->
+  <g fill="url(#band-gradient)">
+    <rect x="153" y="22" width="44" height="4"/>
+    <rect x="153" y="28" width="44" height="4"/>
+    <rect x="153" y="34" width="44" height="4"/>
+    
+    <rect x="273" y="22" width="44" height="4"/>
+    <rect x="273" y="28" width="44" height="4"/>
+    <rect x="273" y="34" width="44" height="4"/>
+    
+    <rect x="400" y="25" width="88" height="17" fill="url(#thick-band-gradient)"/>
+    
+    <rect x="583" y="28" width="44" height="4"/>
+    <rect x="583" y="34" width="44" height="4"/>
+
+    <rect x="753" y="34" width="33" height="4"/>
+    
+    <rect x="893" y="34" width="33" height="4"/>
+  </g>
+  
+  <!-- Original Bottom row of bands (symmetrical) -->
+  <g fill="url(#band-gradient)">
+    <rect x="153" y="87" width="44" height="4"/>
+    <rect x="153" y="81" width="44" height="4"/>
+    <rect x="153" y="75" width="44" height="4"/>
+    
+    <rect x="273" y="87" width="44" height="4"/>
+    <rect x="273" y="81" width="44" height="4"/>
+    <rect x="273" y="75" width="44" height="4"/>
+    
+    <rect x="400" y="71" width="88" height="17" fill="url(#thick-band-gradient)"/>
+    
+    <rect x="583" y="81" width="44" height="4"/>
+    <rect x="583" y="75" width="44" height="4"/>
+    
+    <rect x="753" y="75" width="33" height="4"/>
+    
+    <rect x="893" y="75" width="33" height="4"/>
+  </g>
+
+  <!-- Additional Top row of bands -->
+  <g fill="url(#band-gradient)">
+    <rect x="1109" y="22" width="44" height="4"/>
+    <rect x="1109" y="28" width="44" height="4"/>
+    <rect x="1109" y="34" width="44" height="4"/>
+    
+    <rect x="1229" y="22" width="44" height="4"/>
+    <rect x="1229" y="28" width="44" height="4"/>
+    <rect x="1229" y="34" width="44" height="4"/>
+    
+    <rect x="1356" y="25" width="88" height="17" fill="url(#thick-band-gradient)"/>
+    
+    <rect x="1539" y="28" width="44" height="4"/>
+    <rect x="1539" y="34" width="44" height="4"/>
+
+    <rect x="1709" y="34" width="33" height="4"/>
+    
+    <rect x="1849" y="34" width="33" height="4"/>
+  </g>
+  
+  <!-- Additional Bottom row of bands (symmetrical) -->
+  <g fill="url(#band-gradient)">
+    <rect x="1109" y="87" width="44" height="4"/>
+    <rect x="1109" y="81" width="44" height="4"/>
+    <rect x="1109" y="75" width="44" height="4"/>
+    
+    <rect x="1229" y="87" width="44" height="4"/>
+    <rect x="1229" y="81" width="44" height="4"/>
+    <rect x="1229" y="75" width="44" height="4"/>
+    
+    <rect x="1356" y="71" width="88" height="17" fill="url(#thick-band-gradient)"/>
+    
+    <rect x="1539" y="81" width="44" height="4"/>
+    <rect x="1539" y="75" width="44" height="4"/>
+    
+    <rect x="1709" y="75" width="33" height="4"/>
+    
+    <rect x="1849" y="75" width="33" height="4"/>
+  </g>
+</svg>

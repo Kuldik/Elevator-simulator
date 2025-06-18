@@ -5,6 +5,7 @@ interface ElevatorState {
   queue: number[];
   direction: "up" | "down" | "idle";
   status: "moving" | "stopped" | "arriving";
+  history: number[];
 }
 
 const initialState: ElevatorState = {
@@ -12,6 +13,7 @@ const initialState: ElevatorState = {
   queue: [],
   direction: "idle",
   status: "stopped",
+  history: [],
 };
 
 
@@ -27,6 +29,10 @@ const elevatorSlice = createSlice({
     },
     setCurrentFloor(state, action: PayloadAction<number>) {
       state.currentFloor = action.payload;
+      state.history.unshift(action.payload);
+      if (state.history.length > 5) {
+        state.history.pop();
+      }
     },
     setStatus(state, action: PayloadAction<ElevatorState["status"]>) {
       state.status = action.payload;

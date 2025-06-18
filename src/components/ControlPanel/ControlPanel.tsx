@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { addToQueue } from "../../store/elevatorSlice"
+import { addToQueue, clearQueue } from "../../store/elevatorSlice"
 import styles from "./ControlPanel.module.css";
 
 const FLOORS = [6, 5, 4, 3, 2, 1, 0];
@@ -18,6 +18,22 @@ const ControlPanel = () => {
           {floor}
         </button>
       ))}
+      <button
+        onClick={() => dispatch(clearQueue())}
+        style={{ 
+          marginTop: "10px", 
+          background: "darkred", 
+          color: "white",
+          border: "none",
+          borderRadius: "6px",
+          cursor: "pointer",
+          padding: "10px 20px",
+          transition: "background 0.2s ease",
+          fontSize: "16px"
+          }}
+      >
+        Аварийная остановка
+      </button>
     </div>
   );
 };
