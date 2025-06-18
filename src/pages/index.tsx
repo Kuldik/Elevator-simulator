@@ -26,7 +26,7 @@ export default function Home() {
         }}
       >
         <img
-          src="/building.png"
+          src="building.png"
           alt="Building"
           style={{
             position: "absolute",

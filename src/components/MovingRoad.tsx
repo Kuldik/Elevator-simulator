@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
 const carImages = [
-  { src: "/elevator-simulator/car1left.svg", direction: "left" },
-  { src: "/elevator-simulator/car2left.svg", direction: "left" },
-  { src: "/elevator-simulator/car1right.svg", direction: "right" },
-  { src: "/elevator-simulator/car2right.svg", direction: "right" },
+  { src: "car1left.svg", direction: "left" },
+  { src: "car2left.svg", direction: "left" },
+  { src: "car1right.svg", direction: "right" },
+  { src: "car2right.svg", direction: "right" },
 ];
 
 const MovingRoad = () => {
@@ -31,7 +31,7 @@ const MovingRoad = () => {
         width: "100%",
         height: "100px",
         position: "relative",
-        backgroundImage: `url("/elevator-simulator/road3.svg")`,
+        backgroundImage: `url("road3.svg")`,
         backgroundRepeat: "repeat-x",
         backgroundSize: "cover",
         overflow: "hidden",
@@ -41,7 +41,7 @@ const MovingRoad = () => {
         const carStyle = {
           position: "absolute" as const,
           height: "50px",
-          bottom: car.direction === "left" ? "-7px" : "20px",
+          bottom: car.direction === "left" ? "-7px" : "40px",
           animation: `${car.direction === "left" ? "moveLeft" : "moveRight"} 10s linear`,
         };
 
