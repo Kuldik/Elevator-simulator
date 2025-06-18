@@ -122,7 +122,7 @@ const Elevator = () => {
         }}
       >
         <img
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/lift.png`}
+          src="/elevator-simulator/building.png"
           alt="Lift cabin"
           width={100}
           height={110}
