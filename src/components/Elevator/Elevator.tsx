@@ -10,7 +10,7 @@ import {
   setDirection,
 } from "../../store/elevatorSlice";
 
-const FLOOR_HEIGHT = 150;
+const FLOOR_HEIGHT = 138;
 const TOTAL_FLOORS = 7;
 
 const Elevator = () => {
@@ -91,7 +91,7 @@ const Elevator = () => {
     }, 2000); // Время на переезд
   }, [queue, currentFloor, status, direction, dispatch]);
 
-  const floorHeights = [40, 130, 130, 140, 135, 130, 130];
+  const floorHeights = [35, 120, 120, 120, 120, 110, 110];
 
   const getOffsetY = (floor: number) => {
   return -floorHeights.slice(0, floor).reduce((acc, h) => acc + h, 0);
@@ -122,7 +122,7 @@ const Elevator = () => {
         }}
       >
         <img
-          src="/elevator-simulator/lift.png"
+          src="lift.png"
           alt="Lift cabin"
           width={100}
           height={110}

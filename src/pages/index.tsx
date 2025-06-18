@@ -26,7 +26,7 @@ export default function Home() {
         }}
       >
         <img
-          src="/elevator-simulator/building.png"
+          src="/building.png"
           alt="Building"
           style={{
             position: "absolute",
