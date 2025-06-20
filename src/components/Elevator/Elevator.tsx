@@ -1,5 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../../store";
+import { useDispatch } from "react-redux";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import {
@@ -10,13 +9,21 @@ import {
   setDirection,
 } from "../../store/elevatorSlice";
 
+import {
+  useCurrentFloor,
+  useQueue,
+  useStatus,
+  useDirection,
+} from "../../store/elevatorSelectors";
+
 const FLOOR_HEIGHT = 138;
 const TOTAL_FLOORS = 7;
 
 const Elevator = () => {
-  const { currentFloor, queue, status, direction } = useSelector(
-    (state: RootState) => state.elevator
-  );
+  const currentFloor = useCurrentFloor();
+  const queue = useQueue();
+  const status = useStatus();
+  const direction = useDirection();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -65,16 +72,6 @@ const Elevator = () => {
       return;
     }
 
-    if (queue.length === 0 && status === "stopped") {
-      const timeout = setTimeout(() => {
-        if (currentFloor !== 0 && !queue.includes(0)) {
-          dispatch(addToQueue(0));
-          dispatch(setDirection("down"));
-        }
-      }, 5000);
-      return () => clearTimeout(timeout);
-    }
-
     // Следующий этаж
     const nextFloor = floorsInDirection[0];
 
@@ -94,14 +91,15 @@ const Elevator = () => {
   const floorHeights = [35, 120, 120, 120, 120, 110, 110];
 
   const getOffsetY = (floor: number) => {
-  return -floorHeights.slice(0, floor).reduce((acc, h) => acc + h, 0);
-};
+    return -floorHeights.slice(0, floor).reduce((acc, h) => acc + h, 0);
+  };
+
   return (
     <div
       style={{
         position: "relative",
         width: "100px",
-        height: `${FLOOR_HEIGHT * TOTAL_FLOORS - 237 }px`,
+        height: `${FLOOR_HEIGHT * TOTAL_FLOORS - 237}px`,
       }}
     >
       <motion.div
@@ -135,7 +133,6 @@ const Elevator = () => {
             border: "1px solid rgba(255,255,255,0.1)",
           }}
         />
-
       </motion.div>
     </div>
   );
